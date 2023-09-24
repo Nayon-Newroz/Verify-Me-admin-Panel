@@ -27,7 +27,7 @@ const Header = ({ toggleTheme }) => {
     setAnchorElUser(null);
   };
   return (
-    <>
+    <Box sx={{ padding: "10px 12px" }}>
       <Grid
         container
         justifyContent="space-between"
@@ -230,7 +230,7 @@ const Header = ({ toggleTheme }) => {
           </Menu>
         </Grid>
       </Grid>
-    </>
+    </Box>
   );
 };
 

@@ -17,6 +17,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Header from "./header/Header";
 import Navbar from "./header/Navbar";
 import Divider from "@mui/material/Divider";
+import Navigation from "./pages/navigation/Navigation";
 const lightTheme = createTheme({
   palette: {
     mode: "light", // Light theme mode
@@ -115,6 +116,7 @@ const lightTheme = createTheme({
           backgroundColor: "#fff",
           boxShadow:
             "0px 2px 3px 0px rgba(0, 34, 66, 0.05), 0px 0px 1px 0px rgba(0, 0, 0, 0.10)",
+          padding: "24px",
         },
       },
     },
@@ -127,6 +129,15 @@ const lightTheme = createTheme({
           padding: "8px 10px",
           borderRadius: "6px",
           textTransform: "none",
+        },
+      },
+    },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#e5e5e5", // Change the background color to your desired color
+          height: "1px", // Change the height as needed
+          margin: "0px", // Change the margin as needed
         },
       },
     },
@@ -228,6 +239,9 @@ const darkTheme = createTheme({
       styleOverrides: {
         root: {
           backgroundColor: "#171717",
+          boxShadow:
+            "0px 2px 3px 0px rgba(0, 34, 66, 0.05), 0px 0px 1px 0px rgba(0, 0, 0, 0.10)",
+          padding: "24px",
         },
       },
     },
@@ -241,6 +255,15 @@ const darkTheme = createTheme({
           padding: "8px 10px",
           borderRadius: "6px",
           textTransform: "none",
+        },
+      },
+    },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#333333", // Change the background color to your desired color
+          height: "1px", // Change the height as needed
+          margin: "0px", // Change the margin as needed
         },
       },
     },
@@ -298,7 +321,8 @@ function App() {
           <Navbar />
         </Container>
       </Paper>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ mt: 3 }}>
+        <Navigation />
         <Button
           variant="contained"
           onClick={toggleTheme}
