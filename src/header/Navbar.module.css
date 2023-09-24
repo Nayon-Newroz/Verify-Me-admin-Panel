@@ -1,0 +1,115 @@
+:root {
+  --dropdown_content_min_width: 240px;
+}
+.button_style {
+  color: #6e6b7b !important;
+  text-transform: none !important;
+  padding: 7px 20px !important;
+  font-size: 1rem;
+  font-family: "Montserrat", Helvetica, Arial, serif !important;
+  letter-spacing: 0.01rem !important;
+  font-weight: 400 !important;
+}
+.active_button_style {
+  background: rgba(158, 31, 96, 1) !important;
+  color: #fff !important;
+}
+.nav {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 4px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  /* padding-top: 0.857rem; */
+  /* padding-bottom: 0.857rem; */
+  /* transition: 3s ease; */
+}
+
+.dropdown_content {
+  position: absolute;
+  background-color: #fff;
+  min-width: var(--dropdown_content_min_width);
+  box-shadow: 0 5px 25px rgb(34 41 47 / 10%);
+  top: 80px;
+  z-index: 1;
+  transition: 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 5px;
+  padding: 7px 0px;
+}
+.dropdown_content .nav_container .nav_item {
+  color: #6e6b7b;
+  padding: 0.65rem 1.28rem;
+  text-decoration: none;
+  transition: 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-family: "Montserrat", Helvetica, Arial, serif;
+  letter-spacing: 0.01rem;
+  font-weight: 400;
+}
+.dropdown_content .nav_container {
+  text-decoration: none;
+  position: relative;
+}
+
+.dropdown_content .nav_container .nav_subitem_dropdown_content {
+  position: absolute;
+  background: #fff;
+  min-width: var(--dropdown_content_min_width);
+  box-shadow: 0 5px 25px rgb(34 41 47 / 10%);
+  top: 20px;
+  right: calc(var(--dropdown_content_min_width) * -1);
+  z-index: 1;
+  transition: 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+
+  border-radius: 5px;
+  padding: 7px 0px;
+}
+
+.dropdown_content .nav_item:hover {
+  padding-left: 25px;
+}
+
+.dropdown_content .nav_container:hover .nav_subitem_dropdown_content {
+  top: 0px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.left_Icon {
+  flex-basis: 12%;
+}
+.left_Icon svg {
+  font-size: 15px;
+  position: relative;
+  top: 2px;
+}
+.list_item_title {
+  flex-basis: 88%;
+  position: relative;
+}
+.list_item_title svg {
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  top: -1px;
+}
+.dropdown:hover .dropdown_content {
+  /* display: block; */
+  visibility: visible;
+  opacity: 1;
+  top: 62px;
+}
