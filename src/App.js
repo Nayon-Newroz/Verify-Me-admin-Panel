@@ -60,6 +60,9 @@ const lightTheme = createTheme({
       fade: "#BBBBBB",
       contrastText: "#fff",
     },
+    border: {
+      main: "#e5e5e5",
+    },
   },
   typography: {
     fontFamily: "Roboto, sans-serif",
@@ -132,12 +135,93 @@ const lightTheme = createTheme({
         },
       },
     },
+    // MuiIconButton: {
+    //   styleOverrides: {
+    //     // Name of the slot
+    //     root: {
+    //       // Some CSS
+
+    //     },
+    //   },
+    // },
     MuiDivider: {
       styleOverrides: {
         root: {
           backgroundColor: "#e5e5e5", // Change the background color to your desired color
           height: "1px", // Change the height as needed
           margin: "0px", // Change the margin as needed
+        },
+      },
+    },
+    MuiAvatar: {
+      variants: [
+        {
+          props: { variant: "rounded" },
+          style: {
+            borderRadius: "50%", // You can adjust the value for the desired border radius
+            width: "36px",
+            height: "36px",
+          },
+        },
+        {
+          props: { variant: "square" },
+          style: {
+            borderRadius: "6px", // You can adjust the value for the desired border radius
+            width: "22px",
+            height: "22px",
+          },
+        },
+      ],
+    },
+    MuiLinearProgress: {
+      styleOverrides: {
+        root: {
+          borderRadius: "50px", // Adjust the border-radius value as needed
+          backgroundColor: "#E5E5E5", // Change the background color as needed
+        },
+      },
+    },
+    MuiAlert: {
+      styleOverrides: {
+        root: {
+          borderRadius: "6px", // Adjust the border-radius value as needed
+        },
+        standardSuccess: {
+          backgroundColor: "green", // Change the background color for success alerts
+          padding: "10px 15px",
+          boxShadow: "none",
+        },
+        standardError: {
+          backgroundColor: "red", // Change the background color for error alerts
+
+          padding: "10px 15px",
+          boxShadow: "none",
+        },
+        standardWarning: {
+          backgroundColor: "#FFF9E6", // Change the background color for warning alerts
+          padding: "10px 15px",
+          boxShadow: "none",
+        },
+        standardInfo: {
+          backgroundColor: "blue", // Change the background color for info alerts
+
+          padding: "10px 15px",
+          boxShadow: "none",
+        },
+      },
+    },
+    MuiTableCell: {
+      styleOverrides: {
+        head: {
+          fontSize: "14px",
+          fontWeight: 500,
+          padding: "6px 10px 6px 0px",
+          borderBottom: "1px solid #E5E5E5",
+        },
+        body: {
+          fontSize: "14px",
+          fontWeight: 400,
+          padding: "6px 10px 6px 0px",
         },
       },
     },
@@ -184,6 +268,9 @@ const darkTheme = createTheme({
       light: "#BBBBBB",
       fade: "#555555",
       contrastText: "#fff",
+    },
+    border: {
+      main: "#333333",
     },
   },
   typography: {
@@ -267,6 +354,34 @@ const darkTheme = createTheme({
         },
       },
     },
+    MuiAvatar: {
+      variants: [
+        {
+          props: { variant: "rounded" },
+          style: {
+            borderRadius: "50%", // You can adjust the value for the desired border radius
+            width: "36px",
+            height: "36px",
+          },
+        },
+        {
+          props: { variant: "square" },
+          style: {
+            borderRadius: "6px", // You can adjust the value for the desired border radius
+            width: "22px",
+            height: "22px",
+          },
+        },
+      ],
+    },
+    MuiLinearProgress: {
+      styleOverrides: {
+        root: {
+          borderRadius: "50px", // Adjust the border-radius value as needed
+          backgroundColor: "#333333", // Change the background color as needed
+        },
+      },
+    },
   },
 });
 function App() {
@@ -312,7 +427,7 @@ function App() {
     // </div>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Paper>
+      <Paper sx={{ padding: "0px" }}>
         <Container maxWidth="xl">
           <Header toggleTheme={toggleTheme} />
         </Container>
@@ -425,7 +540,9 @@ function App() {
           </CardActions>
         </Card>
         <Box sx={{ width: "100%", maxWidth: 500 }}>
-          <Typography variant="h1">h1. Heading</Typography>
+          <Typography variant="h1" color="text.main">
+            h1. Heading
+          </Typography>
           <Typography variant="h2" gutterBottom>
             h2. Heading
           </Typography>

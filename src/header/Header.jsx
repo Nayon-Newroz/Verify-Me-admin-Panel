@@ -35,7 +35,14 @@ const Header = ({ toggleTheme }) => {
         // component={Paper}
       >
         <Grid item xs={3}>
-          <img src="/images/Logo.png" alt="logo" />
+          <img
+            src={
+              theme.palette.mode === "light"
+                ? "/images/Logo.png"
+                : "/images/Logo_Dark.png"
+            }
+            alt="logo"
+          />
         </Grid>
         <Grid item xs={9} sx={{ textAlign: "right" }}>
           <FormControl

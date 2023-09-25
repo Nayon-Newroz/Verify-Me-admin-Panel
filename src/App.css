@@ -2,7 +2,7 @@
   margin-left: 0px !important;
   margin-right: 10px !important;
 }
-
+/* -----------------------font-weights------------------------- */
 .fw3 {
   font-weight: 300 !important;
 }
@@ -24,8 +24,21 @@
 .fw9 {
   font-weight: 900 !important;
 }
-
-
+/* ------------------------text-align------------------------ */
+.left {
+  text-align: left !important;
+}
+.right {
+  text-align: right !important;
+}
+.center {
+  text-align: center !important;
+}
+.icon_holder_circle{
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+}
 .App {
   text-align: center;
 }
