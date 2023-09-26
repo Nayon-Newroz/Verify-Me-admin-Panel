@@ -14,8 +14,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { useTheme } from "@mui/material/styles";
-
+import { useTheme } from "@mui/material/styles"; 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const Header = ({ toggleTheme }) => {
   const theme = useTheme();
@@ -46,7 +45,7 @@ const Header = ({ toggleTheme }) => {
         </Grid>
         <Grid item xs={9} sx={{ textAlign: "right" }}>
           <FormControl
-            sx={{ m: 1, width: "100ch" }}
+            sx={{ m: 1, width: "450px" }}
             variant="outlined"
             size="small"
           >
@@ -166,16 +165,9 @@ const Header = ({ toggleTheme }) => {
             onClick={handleOpenUserMenu}
             sx={{ textTransform: "none" }}
             startIcon={
-              <Badge
-                variant="dot"
-                color="success"
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "right",
-                }}
-              >
+               
                 <Avatar alt="Remy Sharp" src="/images/user.png" />
-              </Badge>
+            
             }
             endIcon={
               <svg
@@ -197,7 +189,7 @@ const Header = ({ toggleTheme }) => {
             }
           >
             <Typography
-              variant="subtitle2"
+              variant="medium"
               sx={{ color: `${theme.palette.text.main}` }}
             >
               &nbsp;username

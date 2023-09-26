@@ -5,7 +5,7 @@ import Test from "./Test";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { lime, purple, deepPurple } from "@mui/material/colors";
 import Button from "@mui/material/Button";
-import myPalette from "./ColorPalette";
+import ColorPalette from "./color-palette/ColorPalette";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Container } from "@mui/material";
@@ -22,46 +22,46 @@ const lightTheme = createTheme({
   palette: {
     mode: "light", // Light theme mode
     background: {
-      default: "#F1F1F1", // Change the background color for dark mode
+      default: ColorPalette.light.background.default, // Change the background color for dark mode
     },
     primary: {
-      main: "#00A1A1",
-      light: "#D8F4F5",
-      contrastText: "#fff",
+      main: ColorPalette.light.primary.main,
+      light: ColorPalette.light.primary.light,
+      contrastText: ColorPalette.light.primary.contrastText,
     },
     secondary: {
-      main: "#770332",
-      light: "#FDF2F8",
-      contrastText: "#fff",
+      main: ColorPalette.light.secondary.main,
+      light: ColorPalette.light.secondary.light,
+      contrastText: ColorPalette.light.secondary.contrastText,
     },
     success: {
-      main: "#69CB1C",
-      light: "#F0FAE8",
-      contrastText: "#fff",
+      main: ColorPalette.light.success.main,
+      light: ColorPalette.light.success.light,
+      contrastText: ColorPalette.light.success.contrastText,
     },
     info: {
-      main: "#5780FF",
-      light: "#EEF2FF",
-      contrastText: "#fff",
+      main: ColorPalette.light.info.main,
+      light: ColorPalette.light.info.light,
+      contrastText: ColorPalette.light.info.contrastText,
     },
     warning: {
-      main: "#FFC700",
-      light: "#FFF9E6",
-      contrastText: "#fff",
+      main: ColorPalette.light.warning.main,
+      light: ColorPalette.light.warning.light,
+      contrastText: ColorPalette.light.warning.contrastText,
     },
     error: {
-      main: "#FF3938",
-      light: "#FFEBEB",
-      contrastText: "#fff",
+      main: ColorPalette.light.error.main,
+      light: ColorPalette.light.error.light,
+      contrastText: ColorPalette.light.error.contrastText,
     },
     text: {
-      main: "#222222",
-      light: "#555555",
-      fade: "#BBBBBB",
-      contrastText: "#fff",
+      main: ColorPalette.light.text.main,
+      light: ColorPalette.light.text.light,
+      fade: ColorPalette.light.text.fade,
+      contrastText: ColorPalette.light.text.contrastText,
     },
     border: {
-      main: "#e5e5e5",
+      main: ColorPalette.light.border.main,
     },
   },
   typography: {
@@ -90,25 +90,30 @@ const lightTheme = createTheme({
       fontSize: "1.25rem", //20px
       lineHeight: "1.875rem", // 30px
     },
-    subtitle1: {
+    base: {
       fontSize: "1rem", //16px
       lineHeight: "1.625rem", // 26px
+      display: "block",
     },
-    subtitle2: {
+    medium: {
       fontSize: "0.875rem", //14px
       lineHeight: "1.25rem", // 20px
+      display: "block",
     },
-    body1: {
+    small: {
       fontSize: "0.75rem", //12px
       lineHeight: "1.125rem", // 18px
+      display: "block",
     },
-    body2: {
+    xsmall: {
       fontSize: "0.625rem", //10px
       lineHeight: "1rem", // 16px
+      display: "block",
     },
-    caption: {
+    xxsmall: {
       fontSize: "0.5rem", //10px
       lineHeight: "0.625rem", // 16px
+      display: "block",
     },
   },
   components: {
@@ -147,7 +152,7 @@ const lightTheme = createTheme({
     MuiDivider: {
       styleOverrides: {
         root: {
-          backgroundColor: "#e5e5e5", // Change the background color to your desired color
+          backgroundColor: ColorPalette.light.border.main, // Change the background color to your desired color
           height: "1px", // Change the height as needed
           margin: "0px", // Change the margin as needed
         },
@@ -155,20 +160,20 @@ const lightTheme = createTheme({
     },
     MuiAvatar: {
       variants: [
+        // {
+        //   props: { variant: "rounded" },
+        //   style: {
+        //     borderRadius: "50%", // You can adjust the value for the desired border radius
+        //     width: "36px",
+        //     height: "36px",
+        //   },
+        // },
         {
           props: { variant: "rounded" },
           style: {
-            borderRadius: "50%", // You can adjust the value for the desired border radius
-            width: "36px",
-            height: "36px",
-          },
-        },
-        {
-          props: { variant: "square" },
-          style: {
             borderRadius: "6px", // You can adjust the value for the desired border radius
-            width: "22px",
-            height: "22px",
+            width: "24px",
+            height: "24px",
           },
         },
       ],
@@ -177,7 +182,7 @@ const lightTheme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: "50px", // Adjust the border-radius value as needed
-          backgroundColor: "#E5E5E5", // Change the background color as needed
+          backgroundColor: ColorPalette.light.border.main, // Change the background color as needed
         },
       },
     },
@@ -187,23 +192,23 @@ const lightTheme = createTheme({
           borderRadius: "6px", // Adjust the border-radius value as needed
         },
         standardSuccess: {
-          backgroundColor: "green", // Change the background color for success alerts
+          backgroundColor: ColorPalette.light.success.light, // Change the background color for success alerts
           padding: "10px 15px",
           boxShadow: "none",
         },
         standardError: {
-          backgroundColor: "red", // Change the background color for error alerts
+          backgroundColor: ColorPalette.light.error.light, // Change the background color for error alerts
 
           padding: "10px 15px",
           boxShadow: "none",
         },
         standardWarning: {
-          backgroundColor: "#FFF9E6", // Change the background color for warning alerts
+          backgroundColor: ColorPalette.light.warning.light, // Change the background color for warning alerts
           padding: "10px 15px",
           boxShadow: "none",
         },
         standardInfo: {
-          backgroundColor: "blue", // Change the background color for info alerts
+          backgroundColor: ColorPalette.light.info.light, // Change the background color for info alerts
 
           padding: "10px 15px",
           boxShadow: "none",
@@ -231,46 +236,46 @@ const darkTheme = createTheme({
   palette: {
     mode: "dark", // Dark theme mode
     background: {
-      default: "#111", // Change the background color for dark mode
+      default: ColorPalette.dark.background.default, // Change the background color for dark mode
     },
     primary: {
-      main: "#00A1A1",
-      light: "#016363",
-      contrastText: "#fff",
+      main: ColorPalette.dark.primary.main,
+      light: ColorPalette.dark.primary.light,
+      contrastText: ColorPalette.dark.primary.contrastText,
     },
     secondary: {
-      main: "#770332",
-      light: "#380117",
-      contrastText: "#fff",
+      main: ColorPalette.dark.secondary.main,
+      light: ColorPalette.dark.secondary.light,
+      contrastText: ColorPalette.dark.secondary.contrastText,
     },
     success: {
-      main: "#69CB1C",
-      light: "#132603",
-      contrastText: "#fff",
+      main: ColorPalette.dark.success.main,
+      light: ColorPalette.dark.success.light,
+      contrastText: ColorPalette.dark.success.contrastText,
     },
     info: {
-      main: "#5780FF",
-      light: "#050E28",
-      contrastText: "#fff",
+      main: ColorPalette.dark.info.main,
+      light: ColorPalette.dark.info.light,
+      contrastText: ColorPalette.dark.info.contrastText,
     },
     warning: {
-      main: "#FFC700",
-      light: "#271F02",
-      contrastText: "#fff",
+      main: ColorPalette.dark.warning.main,
+      light: ColorPalette.dark.warning.light,
+      contrastText: ColorPalette.dark.warning.contrastText,
     },
     error: {
-      main: "#FF3938",
-      light: "#370C0C",
-      contrastText: "#fff",
+      main: ColorPalette.dark.error.main,
+      light: ColorPalette.dark.error.light,
+      contrastText: ColorPalette.dark.error.contrastText,
     },
     text: {
-      main: "#FFFFFF",
-      light: "#BBBBBB",
-      fade: "#555555",
-      contrastText: "#fff",
+      main: ColorPalette.dark.text.main,
+      light: ColorPalette.dark.text.light,
+      fade: ColorPalette.dark.text.fade,
+      contrastText: ColorPalette.dark.text.contrastText,
     },
     border: {
-      main: "#333333",
+      main: ColorPalette.dark.border.main,
     },
   },
   typography: {
@@ -299,25 +304,30 @@ const darkTheme = createTheme({
       fontSize: "1.25rem", //20px
       lineHeight: "1.875rem", // 30px
     },
-    subtitle1: {
+    base: {
       fontSize: "1rem", //16px
       lineHeight: "1.625rem", // 26px
+      display: "block",
     },
-    subtitle2: {
+    medium: {
       fontSize: "0.875rem", //14px
       lineHeight: "1.25rem", // 20px
+      display: "block",
     },
-    body1: {
+    small: {
       fontSize: "0.75rem", //12px
       lineHeight: "1.125rem", // 18px
+      display: "block",
     },
-    body2: {
+    xsmall: {
       fontSize: "0.625rem", //10px
       lineHeight: "1rem", // 16px
+      display: "block",
     },
-    caption: {
+    xxsmall: {
       fontSize: "0.5rem", //10px
       lineHeight: "0.625rem", // 16px
+      display: "block",
     },
   },
   components: {
@@ -348,7 +358,7 @@ const darkTheme = createTheme({
     MuiDivider: {
       styleOverrides: {
         root: {
-          backgroundColor: "#333333", // Change the background color to your desired color
+          backgroundColor: ColorPalette.dark.border.main, // Change the background color to your desired color
           height: "1px", // Change the height as needed
           margin: "0px", // Change the margin as needed
         },
@@ -356,16 +366,16 @@ const darkTheme = createTheme({
     },
     MuiAvatar: {
       variants: [
+        // {
+        //   props: { variant: "rounded" },
+        //   style: {
+        //     borderRadius: "50%", // You can adjust the value for the desired border radius
+        //     width: "36px",
+        //     height: "36px",
+        //   },
+        // },
         {
           props: { variant: "rounded" },
-          style: {
-            borderRadius: "50%", // You can adjust the value for the desired border radius
-            width: "36px",
-            height: "36px",
-          },
-        },
-        {
-          props: { variant: "square" },
           style: {
             borderRadius: "6px", // You can adjust the value for the desired border radius
             width: "22px",
@@ -378,7 +388,52 @@ const darkTheme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: "50px", // Adjust the border-radius value as needed
-          backgroundColor: "#333333", // Change the background color as needed
+          backgroundColor: ColorPalette.dark.border.main, // Change the background color as needed
+        },
+      },
+    },
+
+    MuiAlert: {
+      styleOverrides: {
+        root: {
+          borderRadius: "6px", // Adjust the border-radius value as needed
+        },
+        standardSuccess: {
+          backgroundColor: ColorPalette.dark.success.light, // Change the background color for success alerts
+          padding: "10px 15px",
+          boxShadow: "none",
+        },
+        standardError: {
+          backgroundColor: ColorPalette.dark.error.light, // Change the background color for error alerts
+
+          padding: "10px 15px",
+          boxShadow: "none",
+        },
+        standardWarning: {
+          backgroundColor: ColorPalette.dark.warning.light, // Change the background color for warning alerts
+          padding: "10px 15px",
+          boxShadow: "none",
+        },
+        standardInfo: {
+          backgroundColor: ColorPalette.dark.info.light, // Change the background color for info alerts
+
+          padding: "10px 15px",
+          boxShadow: "none",
+        },
+      },
+    },
+    MuiTableCell: {
+      styleOverrides: {
+        head: {
+          fontSize: "14px",
+          fontWeight: 500,
+          padding: "6px 10px 6px 0px",
+          borderBottom: "1px solid #E5E5E5",
+        },
+        body: {
+          fontSize: "14px",
+          fontWeight: 400,
+          padding: "6px 10px 6px 0px",
         },
       },
     },
@@ -529,7 +584,7 @@ function App() {
             <Typography sx={{ mb: 1.5 }} color="text.secondary">
               adjective
             </Typography>
-            <Typography variant="body2">
+            <Typography variant="xsmall">
               well meaning and kindly.
               <br />
               {'"a benevolent smile"'}
@@ -558,22 +613,22 @@ function App() {
           <Typography variant="h6" gutterBottom>
             h6. Heading
           </Typography>
-          <Typography variant="subtitle1" gutterBottom>
-            subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          <Typography variant="base" gutterBottom>
+            base. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+            blanditiis tenetur
+          </Typography>
+          <Typography variant="medium" gutterBottom>
+            medium. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Quos blanditiis tenetur
           </Typography>
-          <Typography variant="subtitle2" gutterBottom>
-            subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Quos blanditiis tenetur
-          </Typography>
-          <Typography variant="body1" gutterBottom>
-            body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          <Typography variant="small" gutterBottom>
+            small. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore
             consectetur, neque doloribus, cupiditate numquam dignissimos laborum
             fugiat deleniti? Eum quasi quidem quibusdam.
           </Typography>
-          <Typography variant="body2" gutterBottom>
-            body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          <Typography variant="xsmall" gutterBottom>
+            xsmall. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore
             consectetur, neque doloribus, cupiditate numquam dignissimos laborum
             fugiat deleniti? Eum quasi quidem quibusdam.
@@ -581,8 +636,8 @@ function App() {
           <Typography variant="button" display="block" gutterBottom>
             button text
           </Typography>
-          <Typography variant="caption" display="block" gutterBottom>
-            caption text
+          <Typography variant="xxsmall" display="block" gutterBottom>
+            xxsmall text
           </Typography>
           <Typography variant="overline" display="block" gutterBottom>
             overline text asddasd

@@ -30,7 +30,7 @@ const Navbar = () => {
   const theme = useTheme();
   let pathname = useLocation().pathname;
   const classes = useStyles();
-  const [active, setActive] = useState("Dashboard");
+  const [active, setActive] = useState("");
 
   const checkSupportsRoute = () => {
     const userPathname = [
@@ -81,7 +81,7 @@ const Navbar = () => {
             disableRipple
             disableElevation
             className={`${classes.button_style} ${
-              pathname === "/dashboard" ? classes.active_button_style : null
+              pathname === "/" ? classes.active_button_style : null
             }`}
             startIcon={
               <svg
@@ -108,7 +108,7 @@ const Navbar = () => {
               </svg>
             }
             component={Link}
-            to="/dashboard"
+            to="/"
           >
             Dashboard
           </Button>
