@@ -66,54 +66,66 @@ const lightTheme = createTheme({
   },
   typography: {
     fontFamily: "Roboto, sans-serif",
+
     h1: {
       fontSize: "3rem", //48px
       lineHeight: "3.625rem", // 58px
+      fontWeight: 400,
     },
     h2: {
       fontSize: "2.5rem", //40px
       lineHeight: "3.125rem", // 50px
+      fontWeight: 400,
     },
     h3: {
       fontSize: "2rem", //32px
       lineHeight: "2.625rem", // 42px
+      fontWeight: 400,
     },
     h4: {
       fontSize: "1.75rem", //28px
       lineHeight: "2.375rem", // 38px
+      fontWeight: 400,
     },
     h5: {
       fontSize: "1.5rem", //24px
       lineHeight: "2.125rem", // 34px
+      fontWeight: 400,
     },
     h6: {
       fontSize: "1.25rem", //20px
       lineHeight: "1.875rem", // 30px
+      fontWeight: 400,
     },
     base: {
       fontSize: "1rem", //16px
       lineHeight: "1.625rem", // 26px
       display: "block",
+      fontWeight: 400,
     },
     medium: {
       fontSize: "0.875rem", //14px
       lineHeight: "1.25rem", // 20px
       display: "block",
+      fontWeight: 400,
     },
     small: {
       fontSize: "0.75rem", //12px
       lineHeight: "1.125rem", // 18px
       display: "block",
+      fontWeight: 400,
     },
     xsmall: {
       fontSize: "0.625rem", //10px
       lineHeight: "1rem", // 16px
       display: "block",
+      fontWeight: 400,
     },
     xxsmall: {
       fontSize: "0.5rem", //10px
       lineHeight: "0.625rem", // 16px
       display: "block",
+      fontWeight: 400,
     },
   },
   components: {
@@ -193,23 +205,37 @@ const lightTheme = createTheme({
         },
         standardSuccess: {
           backgroundColor: ColorPalette.light.success.light, // Change the background color for success alerts
+          color: ColorPalette.light.success.main,
+          fontWeight: 500,
+          fontSize: "14px",
+          lineHeight: "20px",
           padding: "10px 15px",
           boxShadow: "none",
         },
         standardError: {
           backgroundColor: ColorPalette.light.error.light, // Change the background color for error alerts
-
+          color: ColorPalette.light.error.main,
+          fontWeight: 500,
+          fontSize: "14px",
+          lineHeight: "20px",
           padding: "10px 15px",
           boxShadow: "none",
         },
         standardWarning: {
           backgroundColor: ColorPalette.light.warning.light, // Change the background color for warning alerts
+          color: ColorPalette.light.warning.main,
+          fontWeight: 500,
+          fontSize: "14px",
+          lineHeight: "20px",
           padding: "10px 15px",
           boxShadow: "none",
         },
         standardInfo: {
           backgroundColor: ColorPalette.light.info.light, // Change the background color for info alerts
-
+          color: ColorPalette.light.info.main,
+          fontWeight: 500,
+          fontSize: "14px",
+          lineHeight: "20px",
           padding: "10px 15px",
           boxShadow: "none",
         },
@@ -283,51 +309,62 @@ const darkTheme = createTheme({
     h1: {
       fontSize: "3rem", //48px
       lineHeight: "3.625rem", // 58px
+      fontWeight: 400,
     },
     h2: {
       fontSize: "2.5rem", //40px
       lineHeight: "3.125rem", // 50px
+      fontWeight: 400,
     },
     h3: {
       fontSize: "2rem", //32px
       lineHeight: "2.625rem", // 42px
+      fontWeight: 400,
     },
     h4: {
       fontSize: "1.75rem", //28px
       lineHeight: "2.375rem", // 38px
+      fontWeight: 400,
     },
     h5: {
       fontSize: "1.5rem", //24px
       lineHeight: "2.125rem", // 34px
+      fontWeight: 400,
     },
     h6: {
       fontSize: "1.25rem", //20px
       lineHeight: "1.875rem", // 30px
+      fontWeight: 400,
     },
     base: {
       fontSize: "1rem", //16px
       lineHeight: "1.625rem", // 26px
       display: "block",
+      fontWeight: 400,
     },
     medium: {
       fontSize: "0.875rem", //14px
       lineHeight: "1.25rem", // 20px
       display: "block",
+      fontWeight: 400,
     },
     small: {
       fontSize: "0.75rem", //12px
       lineHeight: "1.125rem", // 18px
       display: "block",
+      fontWeight: 400,
     },
     xsmall: {
       fontSize: "0.625rem", //10px
       lineHeight: "1rem", // 16px
       display: "block",
+      fontWeight: 400,
     },
     xxsmall: {
       fontSize: "0.5rem", //10px
       lineHeight: "0.625rem", // 16px
       display: "block",
+      fontWeight: 400,
     },
   },
   components: {
@@ -400,23 +437,37 @@ const darkTheme = createTheme({
         },
         standardSuccess: {
           backgroundColor: ColorPalette.dark.success.light, // Change the background color for success alerts
+          color: ColorPalette.dark.success.main,
+          fontWeight: 500,
+          fontSize: "14px",
+          lineHeight: "20px",
           padding: "10px 15px",
           boxShadow: "none",
         },
         standardError: {
           backgroundColor: ColorPalette.dark.error.light, // Change the background color for error alerts
-
+          color: ColorPalette.dark.error.main,
+          fontWeight: 500,
+          fontSize: "14px",
+          lineHeight: "20px",
           padding: "10px 15px",
           boxShadow: "none",
         },
         standardWarning: {
           backgroundColor: ColorPalette.dark.warning.light, // Change the background color for warning alerts
+          color: ColorPalette.dark.warning.main,
+          fontWeight: 500,
+          fontSize: "14px",
+          lineHeight: "20px",
           padding: "10px 15px",
           boxShadow: "none",
         },
         standardInfo: {
           backgroundColor: ColorPalette.dark.info.light, // Change the background color for info alerts
-
+          color: ColorPalette.dark.info.main,
+          fontWeight: 500,
+          fontSize: "14px",
+          lineHeight: "20px",
           padding: "10px 15px",
           boxShadow: "none",
         },

@@ -896,14 +896,8 @@ const Dashboard = () => {
               </Grid>
             </Grid>
             <Alert severity="" color="warning" sx={{ mb: 1.125 }}>
-              <Typography
-                variant="medium"
-                color="warning.main"
-                sx={{ fontWeight: 400 }}
-              >
-                Important: Please do not share your Store ID or Store Password
-                with anyone.
-              </Typography>
+              Important: Please do not share your Store ID or Store Password
+              with anyone.
             </Alert>
             <TableContainer>
               <Table aria-label="simple table">
@@ -1019,7 +1013,7 @@ const Dashboard = () => {
           </Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper>
+          <Paper sx={{ minHeight: "380px" }}>
             {" "}
             <Grid
               container
@@ -1140,7 +1134,7 @@ const Dashboard = () => {
           </Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper>
+          <Paper sx={{ minHeight: "380px" }}>
             {" "}
             <Grid container alignItems="center" justifyContent="space-between">
               <Grid item xs="auto">
@@ -1214,7 +1208,7 @@ const Dashboard = () => {
           </Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper>
+          <Paper sx={{ minHeight: "380px" }}>
             {" "}
             <Grid
               container

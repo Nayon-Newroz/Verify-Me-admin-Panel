@@ -73,6 +73,20 @@ const Navbar = () => {
       return false;
     }
   };
+  const checkPagesRoute = () => {
+    const userPathname = [
+      "/fonts",
+      "/buttons",
+      "/cards",
+      "/inputs",
+      "/accordions",
+    ];
+    if (userPathname.includes(pathname)) {
+      return true;
+    } else {
+      return false;
+    }
+  };
   return (
     <div>
       <nav className={styles.nav}>
@@ -565,6 +579,189 @@ const Navbar = () => {
                 </div>
                 <div className={styles.list_item_title}>
                   Copmany
+                  <KeyboardArrowRightOutlinedIcon />
+                </div>
+              </section>
+
+              <section className={styles.nav_subitem_dropdown_content}>
+                <Link to="#" className={styles.nav_item}>
+                  <div className={styles.left_Icon}>
+                    <AcUnitOutlinedIcon />
+                  </div>
+                  <div className={styles.list_item_title}>Test 1</div>
+                </Link>
+                <Link to="#" className={styles.nav_item}>
+                  <div className={styles.left_Icon}>
+                    <AcUnitOutlinedIcon />
+                  </div>
+                  <div className={styles.list_item_title}>test 2</div>
+                </Link>
+              </section>
+            </Link>
+          </div>
+        </div>
+        <div className={styles.dropdown}>
+          <Button
+            disableRipple
+            disableElevation
+            className={`${classes.button_style} ${
+              checkPagesRoute() ? classes.active_button_style : null
+            }`}
+            startIcon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+              >
+                <path
+                  d="M3.36426 2.29169V13.2642C3.36426 14.1625 3.78592 15.015 4.51009 15.5559L9.28592 19.1309C10.3034 19.8917 11.7059 19.8917 12.7234 19.1309L17.4992 15.5559C18.2234 15.015 18.6451 14.1625 18.6451 13.2642V2.29169H3.36426Z"
+                  stroke={`${theme.palette.text.light}`}
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M1.83325 2.29169H20.1666"
+                  stroke={`${theme.palette.text.light}`}
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M7.33325 7.33331H14.6666"
+                  stroke={`${theme.palette.text.light}`}
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.33325 11.9167H14.6666"
+                  stroke={`${theme.palette.text.light}`}
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            }
+            endIcon={<KeyboardArrowDownOutlinedIcon />}
+          >
+            Pages
+          </Button>
+          <div className={styles.dropdown_content}>
+            <Link to="/fonts" className={styles.nav_container}>
+              <section className={styles.nav_item}>
+                <div className={styles.left_Icon}>
+                  <AcUnitOutlinedIcon />
+                </div>
+                <div className={styles.list_item_title}>
+                  Fonts
+                  <KeyboardArrowRightOutlinedIcon />
+                </div>
+              </section>
+
+              <section className={styles.nav_subitem_dropdown_content}>
+                <Link to="#" className={styles.nav_item}>
+                  <div className={styles.left_Icon}>
+                    <AcUnitOutlinedIcon />
+                  </div>
+                  <div className={styles.list_item_title}>Test 1</div>
+                </Link>
+                <Link to="#" className={styles.nav_item}>
+                  <div className={styles.left_Icon}>
+                    <AcUnitOutlinedIcon />
+                  </div>
+                  <div className={styles.list_item_title}>test 2</div>
+                </Link>
+              </section>
+            </Link>
+            <Link to="/buttons" className={styles.nav_container}>
+              <section className={styles.nav_item}>
+                <div className={styles.left_Icon}>
+                  <AcUnitOutlinedIcon />
+                </div>
+                <div className={styles.list_item_title}>
+                  Buttons
+                  <KeyboardArrowRightOutlinedIcon />
+                </div>
+              </section>
+
+              <section className={styles.nav_subitem_dropdown_content}>
+                <Link to="#" className={styles.nav_item}>
+                  <div className={styles.left_Icon}>
+                    <AcUnitOutlinedIcon />
+                  </div>
+                  <div className={styles.list_item_title}>Test 1</div>
+                </Link>
+                <Link to="#" className={styles.nav_item}>
+                  <div className={styles.left_Icon}>
+                    <AcUnitOutlinedIcon />
+                  </div>
+                  <div className={styles.list_item_title}>test 2</div>
+                </Link>
+              </section>
+            </Link>
+            <Link to="/cards" className={styles.nav_container}>
+              <section className={styles.nav_item}>
+                <div className={styles.left_Icon}>
+                  <AcUnitOutlinedIcon />
+                </div>
+                <div className={styles.list_item_title}>
+                  Cards
+                  <KeyboardArrowRightOutlinedIcon />
+                </div>
+              </section>
+
+              <section className={styles.nav_subitem_dropdown_content}>
+                <Link to="#" className={styles.nav_item}>
+                  <div className={styles.left_Icon}>
+                    <AcUnitOutlinedIcon />
+                  </div>
+                  <div className={styles.list_item_title}>Test 1</div>
+                </Link>
+                <Link to="#" className={styles.nav_item}>
+                  <div className={styles.left_Icon}>
+                    <AcUnitOutlinedIcon />
+                  </div>
+                  <div className={styles.list_item_title}>test 2</div>
+                </Link>
+              </section>
+            </Link>
+            <Link to="/inputs" className={styles.nav_container}>
+              <section className={styles.nav_item}>
+                <div className={styles.left_Icon}>
+                  <AcUnitOutlinedIcon />
+                </div>
+                <div className={styles.list_item_title}>
+                  Inputs
+                  <KeyboardArrowRightOutlinedIcon />
+                </div>
+              </section>
+
+              <section className={styles.nav_subitem_dropdown_content}>
+                <Link to="#" className={styles.nav_item}>
+                  <div className={styles.left_Icon}>
+                    <AcUnitOutlinedIcon />
+                  </div>
+                  <div className={styles.list_item_title}>Test 1</div>
+                </Link>
+                <Link to="#" className={styles.nav_item}>
+                  <div className={styles.left_Icon}>
+                    <AcUnitOutlinedIcon />
+                  </div>
+                  <div className={styles.list_item_title}>test 2</div>
+                </Link>
+              </section>
+            </Link>
+            <Link to="/accordions" className={styles.nav_container}>
+              <section className={styles.nav_item}>
+                <div className={styles.left_Icon}>
+                  <AcUnitOutlinedIcon />
+                </div>
+                <div className={styles.list_item_title}>
+                  Accordions
                   <KeyboardArrowRightOutlinedIcon />
                 </div>
               </section>

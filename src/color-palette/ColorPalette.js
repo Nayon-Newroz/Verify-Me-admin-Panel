@@ -78,7 +78,7 @@ let ColorPalette = {
       contrastText: "#fff",
     },
     text: {
-      main: "#FFFFFF",
+      main: "#DEDEDE",
       light: "#BBBBBB",
       fade: "#555555",
       contrastText: "#fff",
