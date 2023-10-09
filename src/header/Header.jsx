@@ -15,6 +15,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { useTheme } from "@mui/material/styles"; 
+import SunIcon from "../components/icons/SunIcon";
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const Header = ({ toggleTheme }) => {
   const theme = useTheme();
@@ -111,6 +112,7 @@ const Header = ({ toggleTheme }) => {
             />
           </FormControl>
           <IconButton onClick={toggleTheme}>
+            {theme.palette.mode === "light"?
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="27"
@@ -125,7 +127,9 @@ const Header = ({ toggleTheme }) => {
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
-            </svg>
+            </svg>:
+            <SunIcon/>
+            }
           </IconButton>
 
           <IconButton>

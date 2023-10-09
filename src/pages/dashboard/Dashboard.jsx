@@ -607,7 +607,7 @@ const Dashboard = () => {
           </Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper sx={{ minHeight: "380px" }}>
+          <Paper sx={{ minHeight: "392px" }}>
             {" "}
             <Grid
               container
@@ -697,7 +697,7 @@ const Dashboard = () => {
           </Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper sx={{ minHeight: "380px" }}>
+          <Paper sx={{ minHeight: "392px" }}>
             {" "}
             <Grid container alignItems="center" justifyContent="space-between">
               <Grid item xs="auto">
@@ -741,7 +741,7 @@ const Dashboard = () => {
           </Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper sx={{ minHeight: "380px" }}>
+          <Paper sx={{ minHeight: "392px" }}>
             {" "}
             <Grid
               container
