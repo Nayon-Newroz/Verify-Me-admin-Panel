@@ -74,7 +74,6 @@ const Fonts = () => {
   ];
   return (
     <Container>
-    <Typography variant="base" color="text.main">asdfasdf</Typography>
       {fontsInfo?.map((item, i) => (
         <Paper key={i} sx={{ py: 2, mb: 1 }}>
           <Grid container alignItems="center" spacing={3}>
