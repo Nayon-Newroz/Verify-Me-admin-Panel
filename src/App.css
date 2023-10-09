@@ -25,6 +25,7 @@
   font-weight: 900 !important;
 }
 /* ------------------------text-align------------------------ */
+
 .left {
   text-align: left !important;
 }
@@ -34,11 +35,12 @@
 .center {
   text-align: center !important;
 }
-.icon_holder_circle{
+.icon_holder_circle {
   height: 9px;
   width: 9px;
   border-radius: 50%;
 }
+
 .App {
   text-align: center;
 }

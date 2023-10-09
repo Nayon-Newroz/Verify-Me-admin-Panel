@@ -241,13 +241,33 @@ const lightTheme = createTheme({
         },
       },
     },
+    MuiBreadcrumbs: {
+      styleOverrides: {
+        root: {
+          "& li a": {
+            textDecoration: "none",
+            fontSize: "14px",
+            color: ColorPalette.light.text.main, // Replace with your text color
+          },
+          "& li:last-child": {
+            "& a": {
+              color: ColorPalette.light.text.fade, // Replace with your fade text color
+              cursor: "default",
+            },
+          },
+        },
+        separator: {
+          color: ColorPalette.light.text.main, // Set the color for the separator between breadcrumbs
+        },
+      },
+    },
     MuiTableCell: {
       styleOverrides: {
         head: {
           fontSize: "14px",
           fontWeight: 500,
           padding: "6px 10px 6px 0px",
-          borderBottom: "1px solid #E5E5E5",
+          borderBottom: `1px solid ${ColorPalette.light.border.main}`,
         },
         body: {
           fontSize: "14px",
@@ -473,13 +493,33 @@ const darkTheme = createTheme({
         },
       },
     },
+    MuiBreadcrumbs: {
+      styleOverrides: {
+        root: {
+          "& li a": {
+            textDecoration: "none",
+            fontSize: "14px",
+            color: ColorPalette.dark.text.main, // Replace with your text color
+          },
+          "& li:last-child": {
+            "& a": {
+              color: ColorPalette.dark.text.fade, // Replace with your fade text color
+              cursor: "default",
+            },
+          },
+        },
+        separator: {
+          color: ColorPalette.dark.text.main, // Set the color for the separator between breadcrumbs
+        },
+      },
+    },
     MuiTableCell: {
       styleOverrides: {
         head: {
           fontSize: "14px",
           fontWeight: 500,
           padding: "6px 10px 6px 0px",
-          borderBottom: "1px solid #E5E5E5",
+          borderBottom: `1px solid ${ColorPalette.dark.border.main}`,
         },
         body: {
           fontSize: "14px",
