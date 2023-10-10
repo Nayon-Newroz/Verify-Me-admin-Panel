@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 const NoPageFound = () => {
   return (
     <Paper
+
       sx={{
+        p:3,
         height: "75vh",
         textAlign: "center",
         display: "flex",

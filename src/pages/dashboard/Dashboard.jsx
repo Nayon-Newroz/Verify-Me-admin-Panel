@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Badge,
   Container,
@@ -56,12 +56,18 @@ const Dashboard = () => {
   //     clearInterval(timer);
   //   };
   // }, []);
-
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <>
       <Grid container alignItems="center" spacing={3}>
         <Grid item xs={9}>
-          <Paper sx={{ px: 0, height: "174px" }}>
+          <Paper sx={{py:3, px: 0, height: "174px" }}>
             {" "}
             <Grid
               container
@@ -222,7 +228,7 @@ const Dashboard = () => {
           </Paper>
         </Grid>
         <Grid item xs={3}>
-          <Paper sx={{ height: "174px", display: "flex" }}>
+          <Paper sx={{p:3, height: "174px", display: "flex" }}>
             <Grid container alignItems="center" spacing={2.5}>
               <Grid item xs="auto">
                 <Badge
@@ -308,7 +314,7 @@ const Dashboard = () => {
           </Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper>
+          <Paper sx={{p:3}}>
             {" "}
             <Grid
               container
@@ -514,7 +520,7 @@ const Dashboard = () => {
           </Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper sx={{ pb: 0 }}>
+          <Paper sx={{p:3, pb: 0 }}>
             {" "}
             <Grid
               container
@@ -607,7 +613,7 @@ const Dashboard = () => {
           </Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper sx={{ minHeight: "392px" }}>
+          <Paper sx={{p:3, minHeight: "392px" }}>
             {" "}
             <Grid
               container
@@ -697,7 +703,7 @@ const Dashboard = () => {
           </Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper sx={{ minHeight: "392px" }}>
+          <Paper sx={{p:3, minHeight: "392px" }}>
             {" "}
             <Grid container alignItems="center" justifyContent="space-between">
               <Grid item xs="auto">
@@ -741,7 +747,7 @@ const Dashboard = () => {
           </Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper sx={{ minHeight: "392px" }}>
+          <Paper sx={{p:3, minHeight: "392px" }}>
             {" "}
             <Grid
               container

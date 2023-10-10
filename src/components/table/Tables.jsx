@@ -45,7 +45,7 @@ const Tables = () => {
   };
   return (
     <div>
-      <Paper sx={{ mb: 3 }}>
+      <Paper sx={{p:3, mb: 3 }}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid item xs="auto">
             <Grid container alignItems="center" spacing={1}>
@@ -72,11 +72,11 @@ const Tables = () => {
 
                 <Breadcrumbs
                   aria-label="breadcrumb"
-                  className={classes.breadcrumbsStyle}
+                  // className={classes.breadcrumbsStyle}
                 >
-                  <Link to="/">MUI</Link>
-                  <Link to="/">Core</Link>
-                  <Link to="#">Breadcrumbs</Link>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Users</Link>
+                  <Link to="#">List of Users</Link>
                 </Breadcrumbs>
               </Grid>
             </Grid>
@@ -88,7 +88,7 @@ const Tables = () => {
           </Grid>
         </Grid>
       </Paper>
-      <Paper sx={{ pb: 0 }}>
+      <Paper sx={{p:3, pb: 0 }}>
         <TableContainer>
           <Table aria-label="simple table">
             <TableHead>
@@ -98,7 +98,10 @@ const Tables = () => {
                 <TableCell>PASSWORD</TableCell>
                 <TableCell>UPDATE</TableCell>
                 <TableCell align="right">
+                  <IconButton>
+
                   <MenuIcon color={theme.palette.text.light} />
+                  </IconButton>
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -125,7 +128,10 @@ const Tables = () => {
                     17 June 2022
                   </TableCell>
                   <TableCell align="right">
+                    <IconButton>
+
                     <MenuIcon color={theme.palette.text.light} />
+                    </IconButton>
                   </TableCell>
                 </TableRow>
               ))}

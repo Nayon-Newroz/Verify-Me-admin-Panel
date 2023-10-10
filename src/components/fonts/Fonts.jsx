@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import {
@@ -72,10 +72,17 @@ const Fonts = () => {
       code: `<Typography variant="xxsmall" color="text.main"></Typography>`,
     },
   ];
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <Container>
       {fontsInfo?.map((item, i) => (
-        <Paper key={i} sx={{ py: 2, mb: 1 }}>
+        <Paper key={i} sx={{px:3, py: 2, mb: 1 }}>
           <Grid container alignItems="center" spacing={3}>
             <Grid item xs={2}>
               {" "}
@@ -108,7 +115,7 @@ const Fonts = () => {
 
       <br />
       <br />
-      <Paper>
+      <Paper sx={{p:3}}>
         <Typography Variant="h1" color="text.main"></Typography>
 
         <Typography variant="h1" color="text.main" gutterBottom>

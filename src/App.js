@@ -136,7 +136,7 @@ const lightTheme = createTheme({
           backgroundColor: "#fff",
           boxShadow:
             "0px 2px 3px 0px rgba(0, 34, 66, 0.05), 0px 0px 1px 0px rgba(0, 0, 0, 0.10)",
-          padding: "24px",
+          // padding: "24px",
         },
       },
     },
@@ -395,7 +395,7 @@ const darkTheme = createTheme({
           backgroundColor: "#171717",
           boxShadow:
             "0px 2px 3px 0px rgba(0, 34, 66, 0.05), 0px 0px 1px 0px rgba(0, 0, 0, 0.10)",
-          padding: "24px",
+          // padding: "24px",
         },
       },
     },
@@ -584,7 +584,7 @@ function App() {
       </Paper>
       <Container maxWidth="xl" sx={{ mt: 3 }}>
         <Navigation />
-        <Button
+        {/* <Button
           variant="contained"
           onClick={toggleTheme}
           disableElevation
@@ -617,11 +617,11 @@ function App() {
         </Button>
         <Button variant="outlined" color="success" sx={{ ml: 2 }}>
           Secondary
-        </Button>
+        </Button> */}
 
         <br />
         <br />
-        <Card sx={{ minWidth: 275 }}>
+        {/* <Card sx={{ minWidth: 275 }}>
           <br />
           <Box
             style={{
@@ -684,8 +684,8 @@ function App() {
           <CardActions>
             <Button size="small">Learn More</Button>
           </CardActions>
-        </Card>
-        <Box sx={{ width: "100%", maxWidth: 500 }}>
+        </Card> */}
+        {/* <Box sx={{ width: "100%", maxWidth: 500 }}>
           <Typography variant="h1" color="text.main">
             h1. Heading
           </Typography>
@@ -736,7 +736,7 @@ function App() {
           <Typography variant="poster" display="block" gutterBottom>
             overline text poster
           </Typography>
-        </Box>
+        </Box> */}
       </Container>
       {/* <Test /> */}
     </ThemeProvider>
