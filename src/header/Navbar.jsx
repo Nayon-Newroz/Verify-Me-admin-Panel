@@ -22,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
   button_style: {
     color: `${theme.palette.text.main} !important`,
     fontWeight: "500 !important",
+    padding: "8px 10px",
+    borderRadius: "6px",
+    fontSize: "0.875rem",
+    textTransform: "none",
   },
 
   active_button_style: {
@@ -115,7 +119,7 @@ const Navbar = () => {
             className={`${classes.button_style} ${
               checkSupportsRoute() ? classes.active_button_style : null
             }`}
-            startIcon={<FingerPrintIcon stroke={theme.palette.text.light} />}
+            startIcon={<FingerPrintIcon color={theme.palette.text.light} />}
             endIcon={<KeyboardArrowDownOutlinedIcon />}
           >
             E-KYC Profile

@@ -5,6 +5,7 @@ import NoPageFound from "../NoPageFound";
 import Fonts from "../../components/fonts/Fonts";
 import ColumnChart from "../../components/charts/ColumnChart";
 import Tables from "../../components/table/Tables";
+import Buttons from "../../components/buttons/Buttons";
 
 const Navigation = () => {
   return (
@@ -13,6 +14,7 @@ const Navigation = () => {
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/fonts" element={<Fonts />} />
+        <Route path="/buttons" element={<Buttons />} />
         <Route path="/table" element={<Tables />} />
 
         <Route path="/column-chart" element={<ColumnChart />} />

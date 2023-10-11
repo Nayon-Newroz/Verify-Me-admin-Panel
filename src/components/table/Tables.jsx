@@ -13,6 +13,7 @@ import { Avatar, Grid, IconButton, Paper, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import makeStyles from "@mui/styles/makeStyles";
 import ListIcon from "../icons/ListIcon";
+import FilterIcon from "../icons/FilterIcon";
 const useStyles = makeStyles((theme) => ({
   breadcrumbsStyle: {
     // "& li a": {
@@ -45,7 +46,7 @@ const Tables = () => {
   };
   return (
     <div>
-      <Paper sx={{p:3, mb: 3 }}>
+      <Paper sx={{ p: 3, mb: 3 }}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid item xs="auto">
             <Grid container alignItems="center" spacing={1}>
@@ -88,28 +89,62 @@ const Tables = () => {
           </Grid>
         </Grid>
       </Paper>
-      <Paper sx={{p:3, pb: 0 }}>
+      <Paper sx={{ p: 3, pb: 0 }}>
         <TableContainer>
           <Table aria-label="simple table">
             <TableHead>
               <TableRow>
+                <TableCell sx={{ width: "75px" }}>Photo</TableCell>
                 <TableCell>Name</TableCell>
-                <TableCell>STORE ID</TableCell>
-                <TableCell>PASSWORD</TableCell>
-                <TableCell>UPDATE</TableCell>
+                <TableCell>Document Type</TableCell>
+                <TableCell>Document Number</TableCell>
+                <TableCell>
+                  <Grid
+                    container
+                    alignItems="center"
+                    justifyContent="space-between"
+                  >
+                    <Grid item xs="auto">
+                      Country
+                    </Grid>
+                    <Grid item xs="auto">
+                      <IconButton>
+                        <FilterIcon color={theme.palette.text.light} />
+                      </IconButton>
+                    </Grid>
+                  </Grid>
+                </TableCell>
+                <TableCell>
+                  <Grid
+                    container
+                    alignItems="center"
+                    justifyContent="space-between"
+                  >
+                    <Grid item xs="auto">
+                      Created At{" "}
+                    </Grid>
+                    <Grid item xs="auto">
+                      <IconButton>
+                        <FilterIcon color={theme.palette.text.light} />
+                      </IconButton>
+                    </Grid>
+                  </Grid>
+                </TableCell>
                 <TableCell align="right">
                   <IconButton>
-
-                  <MenuIcon color={theme.palette.text.light} />
+                    <MenuIcon color={theme.palette.text.light} />
                   </IconButton>
                 </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {[1, 2, 3, 4, 5].map(() => (
+              {[1, 2, 3, 4, 5, 6, 7].map(() => (
                 <TableRow
                 // sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
+                  <TableCell>
+                    <Avatar alt="Remy Sharp" src="/images/user.png" />
+                  </TableCell>
                   <TableCell
                     sx={{
                       color: `${theme.palette.primary.main}`,
@@ -118,8 +153,9 @@ const Tables = () => {
                   >
                     Cameron Williamson
                   </TableCell>
-                  <TableCell>ZYN5i1643310414733ODWe7</TableCell>
-                  <TableCell>******</TableCell>
+                  <TableCell>Passport</TableCell>
+                  <TableCell>2641365884226</TableCell>
+                  <TableCell>Iraq</TableCell>
                   <TableCell
                     sx={{
                       color: `${theme.palette.text.light}`,
@@ -129,8 +165,7 @@ const Tables = () => {
                   </TableCell>
                   <TableCell align="right">
                     <IconButton>
-
-                    <MenuIcon color={theme.palette.text.light} />
+                      <MenuIcon color={theme.palette.text.light} />
                     </IconButton>
                   </TableCell>
                 </TableRow>

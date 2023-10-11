@@ -145,10 +145,10 @@ const lightTheme = createTheme({
         // Name of the slot
         root: {
           // Some CSS
-          fontSize: "0.875rem",
-          padding: "8px 10px",
-          borderRadius: "6px",
-          textTransform: "none",
+          // fontSize: "0.875rem",
+          // padding: "8px 10px",
+          // borderRadius: "6px",
+          // textTransform: "none",
         },
       },
     },
@@ -405,10 +405,10 @@ const darkTheme = createTheme({
 
         root: {
           // Some CSS
-          fontSize: "0.875rem",
-          padding: "8px 10px",
-          borderRadius: "6px",
-          textTransform: "none",
+          // fontSize: "0.875rem",
+          // padding: "8px 10px",
+          // borderRadius: "6px",
+          // textTransform: "none",
         },
       },
     },
