@@ -1,6 +1,6 @@
 import React from "react";
 
-const FingerPrintIcon = ({ color,iconClass }) => {
+const FingerPrintIcon = ({ color, iconClass }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
