@@ -124,6 +124,11 @@ const Inputs = () => {
       opacity: 1,
     },
   };
+
+  const mycodes = `const useStyles = makeStyles((theme) => ({
+ customCSS = ${JSON.stringify(customCSS)}
+  }));`;
+  console.log("mycodes", mycodes);
   return (
     <Paper sx={{ p: 3 }}>
       <Grid container spacing={3}>
@@ -245,7 +250,7 @@ const Inputs = () => {
           <pre style={{ fontSize: "14px", margin: 0 }}>
             <CopyBlock
               language={"jsx"}
-              text={JSON.stringify(customCSS, "", 4)}
+              text={JSON.stringify(mycodes, "", 4)}
               showLineNumbers={false}
               theme={theme.palette.mode === "light" ? a11yDark : a11yLight}
               wrapLines={true}
