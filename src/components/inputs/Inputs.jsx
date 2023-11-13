@@ -4,7 +4,7 @@ import TextField from "@mui/material/TextField";
 import makeStyles from "@mui/styles/makeStyles";
 import { useTheme } from "@mui/material/styles";
 import { Grid } from "@mui/material";
-import { CopyBlock, a11yLight, a11yDark } from "react-code-blocks";
+import { CopyBlock, a11yLight, a11yDark, dracula } from "react-code-blocks";
 const useStyles = makeStyles((theme) => ({
   floatingLabelFocusStyle: {
     color: "#ABCCFE !important",
@@ -125,9 +125,11 @@ const Inputs = () => {
     },
   };
 
-  const mycodes = `const useStyles = makeStyles((theme) => ({
- customCSS = ${JSON.stringify(customCSS)}
-  }));`;
+  const mycodes = `
+  const useStyles = makeStyles((theme) => ({
+    customCSS: ${JSON.stringify(customCSS, null, 2)}
+  }));
+  `;
   console.log("mycodes", mycodes);
   return (
     <Paper sx={{ p: 3 }}>
@@ -236,23 +238,29 @@ const Inputs = () => {
             </Grid>
           </Grid>
           <br />
-          <TextField
-            fullWidth
-            id="outlined-basic"
-            // className={customCSS}
-            sx={customCSS}
-            variant="outlined"
-            placeholder="Outlined"
-          />
+          <Grid container alignItems="center" spacing={1}>
+            <Grid item xs={4}>
+              {" "}
+              <TextField
+                fullWidth
+                id="outlined-basic"
+                // className={customCSS}
+                sx={customCSS}
+                variant="outlined"
+                placeholder="Outlined"
+              />
+            </Grid>
+           
+          </Grid>
           =======================================================================
         </Grid>
         <Grid item xs={12} sm={6} md={12}>
           <pre style={{ fontSize: "14px", margin: 0 }}>
             <CopyBlock
               language={"jsx"}
-              text={JSON.stringify(mycodes, "", 4)}
+              text={mycodes}
               showLineNumbers={false}
-              theme={theme.palette.mode === "light" ? a11yDark : a11yLight}
+              theme={dracula}
               wrapLines={true}
               codeBlock
             />
