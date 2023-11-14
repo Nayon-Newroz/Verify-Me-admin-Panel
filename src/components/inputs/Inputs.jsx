@@ -3,12 +3,16 @@ import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 import makeStyles from "@mui/styles/makeStyles";
 import { useTheme } from "@mui/material/styles";
-import { Grid } from "@mui/material";
+import { Button, Grid, IconButton, Typography } from "@mui/material";
 import { CopyBlock, a11yLight, a11yDark, dracula } from "react-code-blocks";
+import Collapse from "@mui/material/Collapse";
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
 const useStyles = makeStyles((theme) => ({
   floatingLabelFocusStyle: {
     color: "#ABCCFE !important",
   },
+
   customInput1: {
     // "& label.Mui-focused": {
     //   color: theme.palette.text.light,
@@ -93,6 +97,11 @@ const Inputs = () => {
   const [hoverBorderColor, setHoverBorderColor] = useState(
     theme.palette.primary.main
   );
+  const [checked, setChecked] = React.useState(false);
+
+  const handleChange = () => {
+    setChecked((prev) => !prev);
+  };
 
   const customCSS = {
     "& .MuiOutlinedInput-root": {
@@ -135,7 +144,9 @@ const Inputs = () => {
     <Paper sx={{ p: 3 }}>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={12}>
-          <h4>Working with function</h4>
+          <Typography variant="h6" gutterBottom>
+            Outlined Without Label
+          </Typography>
           <Grid container alignItems="center" spacing={2}>
             <Grid item xs={2}>
               <TextField
@@ -238,7 +249,12 @@ const Inputs = () => {
             </Grid>
           </Grid>
           <br />
-          <Grid container alignItems="center" spacing={1}>
+          <Grid
+            container
+            alignItems="center"
+            justifyContent="space-between"
+            spacing={1}
+          >
             <Grid item xs={4}>
               {" "}
               <TextField
@@ -247,24 +263,41 @@ const Inputs = () => {
                 // className={customCSS}
                 sx={customCSS}
                 variant="outlined"
-                placeholder="Outlined"
+                placeholder="Outlined without label"
               />
             </Grid>
-           
+            <Grid item xs="auto">
+              <Button
+                variant="outlined"
+                sx={{ borderRadius: "100px" }}
+                endIcon={
+                  checked ? (
+                    <KeyboardArrowUpRoundedIcon />
+                  ) : (
+                    <KeyboardArrowDownRoundedIcon />
+                  )
+                }
+                onClick={handleChange}
+              >
+                {" "}
+                {checked ? "Hide code" : "Show code"}
+              </Button>
+            </Grid>
           </Grid>
-          =======================================================================
         </Grid>
         <Grid item xs={12} sm={6} md={12}>
-          <pre style={{ fontSize: "14px", margin: 0 }}>
-            <CopyBlock
-              language={"jsx"}
-              text={mycodes}
-              showLineNumbers={false}
-              theme={dracula}
-              wrapLines={true}
-              codeBlock
-            />
-          </pre>
+          <Collapse in={checked} collapsedSize={160}>
+            <pre style={{ fontSize: "14px", margin: 0 }}>
+              <CopyBlock
+                language={"jsx"}
+                text={mycodes}
+                showLineNumbers={false}
+                theme={dracula}
+                wrapLines={true}
+                codeBlock
+              />
+            </pre>
+          </Collapse>
         </Grid>
         <Grid item xs={12} sm={6} md={12}>
           <small>
