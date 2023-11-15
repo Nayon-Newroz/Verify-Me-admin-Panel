@@ -136,7 +136,7 @@ const Inputs = () => {
 
   const mycodes = `
   const useStyles = makeStyles((theme) => ({
-    customCSS: ${JSON.stringify(customCSS, null, 2)}
+    outlinedWithoutLabelCss: ${JSON.stringify(customCSS, null, 2)}
   }));
   `;
   console.log("mycodes", mycodes);
