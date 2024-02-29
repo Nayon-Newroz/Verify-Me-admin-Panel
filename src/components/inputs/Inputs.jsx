@@ -290,7 +290,7 @@ const Inputs = () => {
             <pre style={{ fontSize: "14px", margin: 0 }}>
               <CopyBlock
                 language={"jsx"}
-                text={mycodes}
+                text={JSON.stringify(customCSS, null, 2)}
                 showLineNumbers={false}
                 theme={dracula}
                 wrapLines={true}
